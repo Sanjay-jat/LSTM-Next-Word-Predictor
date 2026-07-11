@@ -1,7 +1,7 @@
 <h1 align="center">🧠 LSTM Next Word Predictor</h1>
 
 <p align="center">
-A PyTorch implementation of an LSTM-based Next Word Prediction model trained on the <b>Alice in Wonderland</b> corpus.
+A PyTorch implementation of an <b>LSTM-based Next Word Prediction</b> model trained on the <b>Alice's Adventures in Wonderland</b> corpus.
 </p>
 
 <p align="center">
@@ -14,58 +14,34 @@ A PyTorch implementation of an LSTM-based Next Word Prediction model trained on 
 </p>
 
 <p align="center">
-⭐ Built from scratch using PyTorch as part of my NLP & Deep Learning learning journey.
-</p>
-
----
-# 🧠 LSTM Next Word Predictor
-
-> **A PyTorch implementation of an LSTM-based Next Word Prediction model trained on the _Alice in Wonderland_ corpus.**
-
-<p align="center">
-
-![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python)
-![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-red?style=for-the-badge&logo=pytorch)
-![NLP](https://img.shields.io/badge/NLP-LSTM-success?style=for-the-badge)
-![Status](https://img.shields.io/badge/Project-Learning%20Project-orange?style=for-the-badge)
-
+⭐ Built from scratch using PyTorch as part of my Deep Learning & NLP learning journey.
 </p>
 
 ---
 
-# 📖 About The Project
+# 📖 About the Project
 
 This repository is part of **my learning journey in Deep Learning and Natural Language Processing (NLP).**
 
 The objective of this project was to understand **how an LSTM learns language patterns** by predicting the next word in a sentence.
 
-Instead of relying on high-level libraries, I implemented the complete pipeline manually—from text preprocessing to training an LSTM model and generating text autoregressively.
+Instead of relying on high-level NLP frameworks, I implemented the complete workflow manually—from preprocessing raw text to training an LSTM language model and generating text one word at a time.
 
 ---
 
-# 🚀 Features
+# ✨ Features
 
-✅ Text preprocessing
-
-✅ Tokenization using NLTK
-
-✅ Vocabulary creation
-
-✅ Unknown token handling (`<unk>`)
-
-✅ Sequence generation
-
-✅ Sequence padding
-
-✅ Train-Test Split
-
-✅ Custom PyTorch Dataset & DataLoader
-
-✅ LSTM implementation
-
-✅ Next Word Prediction
-
-✅ Autoregressive text generation
+- Text preprocessing
+- Tokenization using NLTK
+- Vocabulary creation
+- Unknown token handling (`<unk>`)
+- Sequence generation
+- Sequence padding
+- Train-Test Split
+- Custom PyTorch Dataset & DataLoader
+- LSTM implementation from scratch
+- Next Word Prediction
+- Autoregressive text generation
 
 ---
 
@@ -78,7 +54,15 @@ Instead of relying on high-level libraries, I implemented the complete pipeline 
 | NLP | NLTK |
 | Data Processing | NumPy |
 | Visualization | Matplotlib |
-| ML Utilities | Scikit-Learn |
+| Machine Learning Utilities | Scikit-Learn |
+
+---
+
+# 📚 Dataset
+
+This model was trained on the public-domain novel **Alice's Adventures in Wonderland** by **Lewis Carroll**.
+
+The corpus was converted into sequential training samples using a sliding-window approach, where the model learns to predict the next word given the previous words.
 
 ---
 
@@ -110,7 +94,7 @@ LSTM-Next-Word-Predictor/
 
 # 🏗️ Model Architecture
 
-```
+```text
 Input Sequence
         │
         ▼
@@ -133,36 +117,36 @@ Predicted Next Word
 
 # 📈 Training Performance
 
-The training loss consistently decreases over epochs, showing that the model successfully learns language patterns from the dataset.
+The training loss consistently decreases throughout training, showing that the model successfully learns language patterns from the corpus.
 
 <p align="center">
-
-![Training Loss](images/training_loss.png)
-
+<img src="images/training_loss.png" width="800">
 </p>
 
 ---
 
 # 📊 Evaluation
 
-| Metric | Score |
-|---------|-------|
+| Metric | Result |
+|---------|---------|
 | Training Loss | **0.2433** |
 | Training Accuracy | **93.16%** |
+| Dataset | **Alice's Adventures in Wonderland** |
+| Framework | **PyTorch** |
 
-> Since this project focuses on language generation, qualitative examples are also included below to demonstrate the model's behavior.
+> Since this project focuses on language generation, qualitative examples are also included below to demonstrate the model's ability to generate coherent text.
 
 ---
 
 # ✨ Example Prediction
 
-### Input Prompt
+### Input
 
 ```text
 Alice was beginning to
 ```
 
-### Generated Output
+### Generated Continuation
 
 ```text
 Alice was beginning to get
@@ -180,26 +164,25 @@ Alice was beginning to get very tired of sitting by her sister on the matter.
 ```
 
 <p align="center">
-
-![Prediction Demo](images/prediction_demo.png)
-
+<img src="images/prediction_demo.png" width="900">
 </p>
 
 ---
 
 # 📚 What I Learned
 
-Working on this project helped me understand:
+This project helped me gain practical experience with:
 
-- How text is converted into numerical sequences
-- Vocabulary creation for NLP models
-- Tokenization and preprocessing
+- NLP text preprocessing
+- Tokenization and vocabulary creation
+- Numerical text representation
+- Sequence generation
 - Sequence padding
-- Building custom PyTorch datasets
-- Training recurrent neural networks (LSTMs)
+- Custom Dataset and DataLoader creation
+- Building LSTM models in PyTorch
 - Language modeling
 - Autoregressive text generation
-- Model evaluation in NLP
+- Training and evaluating deep learning models
 
 ---
 
@@ -207,10 +190,11 @@ Working on this project helped me understand:
 
 - [ ] Add Dropout Regularization
 - [ ] Implement Multi-layer LSTM
-- [ ] Compare with a GRU model
+- [ ] Compare performance with a GRU model
 - [ ] Train on a larger text corpus
 - [ ] Explore Beam Search decoding
 - [ ] Build a Transformer-based next-word predictor
+- [ ] Deploy as a simple web application
 
 ---
 
@@ -219,10 +203,16 @@ Working on this project helped me understand:
 Clone the repository
 
 ```bash
-git clone https://github.com/<YOUR_USERNAME>/LSTM-Next-Word-Predictor.git
+git clone https://github.com/Sanjay-jat/LSTM-Next-Word-Predictor.git
 ```
 
-Install the dependencies
+Move into the project directory
+
+```bash
+cd LSTM-Next-Word-Predictor
+```
+
+Install the required dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -238,17 +228,22 @@ notebooks/Next_word_LSTM.ipynb
 
 # 💡 Note
 
-This project was built as part of my learning journey in **Deep Learning** and **Natural Language Processing**.
+This repository was created as a **learning project** to understand the fundamentals of **LSTMs**, **language modeling**, and **sequence prediction** using PyTorch.
 
-The goal was to understand the concepts behind LSTMs and language modeling by implementing the complete workflow from scratch. Feedback, suggestions, and improvements are always welcome!
+The primary goal was to build the complete pipeline from scratch and strengthen my understanding of deep learning concepts. Feedback, suggestions, and improvements are always welcome!
 
 ---
-## 🤝 Connect With Me
 
-GitHub: https://github.com/Sanjay-jat
+# 🤝 Connect With Me
+
+🔗 **GitHub:** https://github.com/Sanjay-jat
 
 If you have suggestions, ideas, or feedback about this project, feel free to open an issue or connect with me.
 
 ---
-## ⭐ If you found this project interesting, consider giving it a star!
 
+<h3 align="center">🌟 Thanks for Visiting!</h3>
+
+<p align="center">
+If you found this project interesting or learned something from it, consider giving it a ⭐ on GitHub.
+</p>
